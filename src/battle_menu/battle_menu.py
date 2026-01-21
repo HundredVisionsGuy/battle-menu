@@ -28,6 +28,7 @@ import random
 
 
 def main():
+    """run a battle menu"""
     print("Welcome")
 
     # Display prompt and wait for user
