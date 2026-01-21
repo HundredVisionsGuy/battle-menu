@@ -26,16 +26,28 @@ import os
 import time
 import random
 
+# Define color codes
+RED = '\033[31m'
+GREEN = '\033[32m'
+BLUE = '\033[34m'
+RESET = '\033[0m'
 
 def main():
     """run a battle menu"""
-    print("Welcome")
+    os.system('cls')
+    print("\nWelcome\n")
 
     # Display prompt and wait for user
     input("Press enter to clear screen")
 
     # clear the console screen
     os.system('cls')
+
+    # Print colored text
+    print(f"{RED}This text is red.{RESET}")
+    print(GREEN + "This text is green.") # Color continues until reset or end of program
+    print(BLUE + "This text is blue, and will be reset now." + RESET)
+    print("This text is back to normal.")
 
     # delay release of output (random numbers from 0 and up to 10 at most)
     for i in range(random.randrange(10)):
